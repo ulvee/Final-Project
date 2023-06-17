@@ -1,0 +1,270 @@
+#header {
+  font-family: "Open Sans", sans-serif;
+}
+nav {
+  li:hover {
+    color: #3eddbf;
+    h3 {
+      color: black;
+    }
+    h2 {
+      color: black;
+    }
+  }
+}
+.dropdown-container {
+  position: relative;
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  .dropdown.open .options {
+    display: block;
+  }
+
+  .selected-option {
+    padding: 10px;
+    cursor: pointer;
+  }
+
+  .options {
+    display: none;
+    position: absolute;
+    top: 100%;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    li {
+      border-bottom: 1px solid rgb(200, 200, 200);
+      color: rgb(80, 80, 80);
+      font-weight: 300;
+      font-size: 15px;
+    }
+    p {
+      color: rgb(80, 80, 80);
+      font-weight: 300;
+      font-size: 15px;
+    }
+  }
+  .option {
+    padding: 10px 0 10px 0;
+    cursor: pointer;
+  }
+
+  li:hover {
+    color: #3eddbf;
+  }
+  p:hover {
+    color: #3eddbf;
+  }
+  h3:hover {
+    color: #3eddbf;
+  }
+}
+#drop-img {
+  overflow: hidden;
+  img {
+    transition: all 0.8s ease-in-out;
+  }
+  img:hover {
+    transform: scale(1.1);
+  }
+}
+#buy-course {
+  border-radius: 25px;
+  border: 1px solid hsla(197, 100%, 63%, 1);
+}
+
+#buy-course:hover {
+  background: linear-gradient(
+    90deg,
+    hsla(197, 100%, 63%, 1) 0%,
+    hsla(294, 100%, 55%, 1) 100%
+  );
+  color: white;
+  transition: all 0.4s ease-in-out;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.811);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: transparent;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.modal-content p {
+  margin-bottom: 10px;
+}
+
+#sec-1-form {
+  button {
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    background: linear-gradient(
+      90deg,
+      hsla(197, 100%, 63%, 1) 0%,
+      hsla(294, 100%, 55%, 1) 100%
+    );
+    color: white;
+    transition: all 0.4s ease-in-out;
+    border: 1px solid hsla(197, 100%, 63%, 1);
+  }
+  button:hover {
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border: 1px solid hsla(197, 100%, 63%, 1);
+    background: white;
+    color: black;
+  }
+}
+#home-sec-2 {
+  .custom-card:hover h3 {
+    color: #3eddbf;
+    transition: all 0.5s ease-in-out;
+  }
+}
+#buider-kit {
+  button {
+    border-radius: 30px;
+    background: linear-gradient(
+      90deg,
+      hsla(197, 100%, 63%, 1) 0%,
+      hsla(294, 100%, 55%, 1) 100%
+    );
+    color: white;
+    transition: all 0.4s ease-in-out;
+    border: 1px solid hsla(197, 100%, 63%, 1);
+  }
+  button:hover {
+    border-radius: 30px;
+    border: 1px solid hsla(197, 100%, 63%, 1);
+    background: white;
+    color: black;
+  }
+}
+#top-category {
+  background-image: url(./assets/images/bk-category.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#swiper-card-bck {
+  background-image: url(./assets/images/bl-collection.png);
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.trusted-sec {
+  background-image: url("https://coursebuilder.thimpress.com/demo-kit/wp-content/uploads/sites/25/2019/10/bk-skill.png?id=6808");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+}
+#topcourse-card:hover #topcourse-c-cont {
+  background-color: #84cdf0;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  transition: all 0.5s ease-in-out;
+  p {
+    color: #fff;
+  }
+  span {
+    color: #fff;
+  }
+}
+.create-account {
+  background: linear-gradient(
+    90deg,
+    hsla(197, 100%, 63%, 1) 0%,
+    hsla(294, 100%, 55%, 1) 100%
+  );
+  color: white;
+}
+.client-img img:hover {
+  transform: scale(1.1);
+  transition: all 0.3s ease-in-out;
+}
+.custom-footer {
+  background: linear-gradient(
+    90deg,
+    hsla(197, 100%, 63%, 1) 0%,
+    hsla(294, 100%, 55%, 1) 100%
+  );
+}
+.footer-bck {
+  width: 30%;
+}
+
+#footer-form {
+  border: 1px solid rgba(255, 255, 255, 0.447);
+  button {
+    background: white;
+    transition: all 0.4s ease-in-out;
+  }
+  button:hover {
+    border-radius: 30px;
+    background: linear-gradient(
+      90deg,
+      hsla(197, 100%, 63%, 1) 0%,
+      hsla(294, 100%, 55%, 1) 100%
+    );
+    color: white;
+  }
+}
+li {
+  list-style-type: none;
+}
+
+.footer-first-item {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.447);
+  padding-bottom: 20px;
+}
+.lastest-new-c {
+  button {
+    border-radius: 30px;
+    background: linear-gradient(
+      90deg,
+      hsla(197, 100%, 63%, 1) 0%,
+      hsla(294, 100%, 55%, 1) 100%
+    );
+    color: white;
+    transition: all 0.4s ease-in-out;
+    border: 1px solid hsla(197, 100%, 63%, 1);
+  }
+  button:hover {
+    border-radius: 30px;
+    border: 1px solid hsla(197, 100%, 63%, 1);
+    background: white;
+    color: black;
+  }
+}
+
+#lastest-card {
+  transition: transform 0.3s;
+  transform: translateY(0);
+}
+#lastest-card:hover {
+  transform: translateY(30px);
+}
+.pages-main-bck {
+  background-image: url(./assets/images/page_title_1.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  h2{
+    border-right: 1px solid gray;
+    
+  }
+}

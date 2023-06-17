@@ -263,8 +263,40 @@ li {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  h2{
+  h2 {
     border-right: 1px solid gray;
-    
+  }
+}
+
+.our-about-bck {
+  background-image: url(./assets/images/header-search-bk.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.custom-card-o-service:hover h3 {
+  color: #3eddbf;
+}
+.our-contact-bck {
+  background-image: url("https://coursebuilder.thimpress.com/demo-kit/wp-content/uploads/sites/25/2017/06/layer-16-e1503475892492.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.our-contact-bck::before {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 1.2;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.about-page-main{
+  li:hover{
+    color: black;
   }
 }

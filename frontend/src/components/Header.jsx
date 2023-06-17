@@ -67,7 +67,7 @@ function Header() {
         <div className="flex gap-[100px]">
           <nav>
             <ul className="flex gap-[30px] items-center">
-              <div className="dropdown-container">
+              <div className="dropdown-container z-50">
                 <div
                   className={`dropdown ${isDropdownOpen1 ? "open" : ""}`}
                   onMouseEnter={handleDropdownOpen1}
@@ -80,7 +80,7 @@ function Header() {
                     {selectedOption1 ? selectedOption1 : "Home"}
                     <IoIosArrowDown className="mt-[4px] text-[14px]" />
                   </div>
-                  <div className="options px-[15px] min-w-[300px] left-0">
+                  <div className="options px-[15px] min-w-[300px] z-50 left-0">
                     <Link to={"/"}>
                       <li className="option ">Home</li>
                     </Link>
@@ -116,7 +116,7 @@ function Header() {
                       {selectedOption2 ? selectedOption2 : "Courses"}
                       <IoIosArrowDown className="mt-[4px] text-[14px]" />
                     </div>
-                    <div className="options min-w-[1000px] left-[-400px] pt-[20px] pb-[40px] px-[30px]">
+                    <div className="options min-w-[1000px] left-[-400px] z-50 pt-[20px] pb-[40px] px-[30px]">
                       <div className="flex justify-between">
                         <div className="option">
                           <h2 className="mb-[20px]">ABOUT COURSES</h2>
@@ -190,7 +190,7 @@ function Header() {
                     {selectedOption3 ? selectedOption3 : "Pages"}
                     <IoIosArrowDown className="mt-[4px] text-[14px]" />
                   </div>
-                  <div className="options px-[15px] min-w-[300px] left-0">
+                  <div className="options px-[15px] min-w-[300px] z-50 left-0">
                     <Link to={"#"}>
                       <li className="option ">Blog</li>
                     </Link>
@@ -230,7 +230,7 @@ function Header() {
               <BsFillPersonFill /> Login
             </button>
             {isOpen && (
-              <div className="modal-overlay" onClick={handleOverlayClick}>
+              <div className="modal-overlay z-50" onClick={handleOverlayClick}>
                 <div className="modal-content flex">
                   <div className="h-[550px] w-[400px]">
                     <img className="w-[100%] h-[100%]" src={modalimg} alt="" />

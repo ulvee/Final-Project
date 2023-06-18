@@ -5,7 +5,7 @@ function OurService() {
   return (
     <div className="py-[100px]">
       <div className="max-w-[1200px] mx-auto">
-        <div className=" flex flex-col gap-[70px]">
+        <div className=" flex flex-col gap-[70px] justify-center">
           <div className="flex flex-col items-center gap-[20px]">
             <h2 className="text-[48px] font-[600]">Our Service Categories</h2>
             <p className="text-[17px] text-[gray]">

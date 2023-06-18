@@ -301,9 +301,19 @@ li {
     color: black;
   }
 }
-.contact-border-effect-c{
+.contact-border-effect-c {
   transition: all 0.2s ease-in-out;
 }
 .contact-first-items:hover .contact-border-effect-c {
   border: 5px solid white;
+}
+.popular-course-img {
+  overflow: hidden;
+  img{
+    transition: all 0.5s ease-in-out;
+  }
+}
+.popular-course-img img:hover {
+  transform: scale(1.2);
+  transition: all 0.5s ease-in-out;
 }

@@ -73,13 +73,12 @@ function Header() {
                   onMouseEnter={handleDropdownOpen1}
                   onMouseLeave={handleDropdownClose1}
                 >
-                  <div
-                    className="selected-option flex items-center gap-[8px] text-[17px]"
-                    onClick={() => setIsDropdownOpen1(!isDropdownOpen1)}
-                  >
-                    {selectedOption1 ? selectedOption1 : "Home"}
-                    <IoIosArrowDown className="mt-[4px] text-[14px]" />
-                  </div>
+                  <Link to={"/"}>
+                    <div className="selected-option flex items-center gap-[8px] text-[17px]">
+                      {selectedOption1 ? selectedOption1 : "Home"}
+                      <IoIosArrowDown className="mt-[4px] text-[14px]" />
+                    </div>
+                  </Link>
                   <div className="options px-[15px] min-w-[300px] z-50 left-0">
                     <Link to={"/"}>
                       <li className="option ">Home</li>
@@ -99,9 +98,10 @@ function Header() {
                 </div>
               </div>
 
-              <li>
-                <Link to="/about">About</Link>
-              </li>
+              <Link to="/about">
+                <li className="text-[17px]">About</li>
+              </Link>
+
               <li>
                 <div className="dropdown-container">
                   <div
@@ -109,13 +109,12 @@ function Header() {
                     onMouseEnter={handleDropdownOpen2}
                     onMouseLeave={handleDropdownClose2}
                   >
-                    <div
-                      className="selected-option flex items-center gap-[8px] text-[17px]"
-                      onClick={() => setIsDropdownOpen2(!isDropdownOpen2)}
-                    >
-                      {selectedOption2 ? selectedOption2 : "Courses"}
-                      <IoIosArrowDown className="mt-[4px] text-[14px]" />
-                    </div>
+                    <Link to={"/courses"} className="hover:text-[#3eddbf]">
+                      <div className="selected-option flex items-center gap-[8px] text-[17px]">
+                        {selectedOption2 ? selectedOption2 : "Courses"}
+                        <IoIosArrowDown className="mt-[4px] text-[14px]" />
+                      </div>
+                    </Link>
                     <div className="options min-w-[1000px] left-[-400px] z-50 pt-[20px] pb-[40px] px-[30px]">
                       <div className="flex justify-between">
                         <div className="option">
@@ -183,13 +182,12 @@ function Header() {
                   onMouseEnter={handleDropdownOpen3}
                   onMouseLeave={handleDropdownClose3}
                 >
-                  <div
-                    className="selected-option flex items-center gap-[8px] text-[17px]"
-                    onClick={() => setIsDropdownOpen3(!isDropdownOpen3)}
-                  >
-                    {selectedOption3 ? selectedOption3 : "Pages"}
-                    <IoIosArrowDown className="mt-[4px] text-[14px]" />
-                  </div>
+                  <Link to={"/pages"} className="hover:text-[#3eddbf]">
+                    <div className="selected-option flex items-center gap-[8px] text-[17px]">
+                      {selectedOption3 ? selectedOption3 : "Pages"}
+                      <IoIosArrowDown className="mt-[4px] text-[14px]" />
+                    </div>
+                  </Link>
                   <div className="options px-[15px] min-w-[300px] z-50 left-0">
                     <Link to={"#"}>
                       <li className="option ">Blog</li>
@@ -219,9 +217,10 @@ function Header() {
                 </div>
               </div>
 
-              <li>
-                <Link to="/contact">Contact</Link>
-              </li>
+              <Link to="/contact">
+                {" "}
+                <li className="text-[17px]">Contact</li>
+              </Link>
             </ul>
           </nav>
           <div className="flex gap-10">

@@ -1,5 +1,6 @@
 import React from "react";
 import ContactImg from "../../../assets/images/contact-img.png";
+import { Link } from "react-router-dom";
 
 function CreateAccount() {
   return (
@@ -12,7 +13,11 @@ function CreateAccount() {
               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
               eiusmod
             </p>
-            <button className="text-[17px] uppercase font-[700] py-[12px] px-[40px] bg-[white] text-[black] rounded-[25px] hover:text-[white] hover:bg-[#3eddbf]">Create Now</button>
+            <Link to={"/register"}>
+              <button className="text-[17px] uppercase font-[700] py-[12px] px-[40px] bg-[white] text-[black] rounded-[25px] hover:text-[white] hover:bg-[#3eddbf]">
+                Create Now
+              </button>
+            </Link>
           </div>
           <div>
             <img src={ContactImg} alt="" />

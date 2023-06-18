@@ -263,6 +263,7 @@ li {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
   h2 {
     border-right: 1px solid gray;
   }
@@ -295,8 +296,14 @@ li {
   left: 0;
   right: 0;
 }
-.about-page-main{
-  li:hover{
+.about-page-main {
+  li:hover {
     color: black;
   }
+}
+.contact-border-effect-c{
+  transition: all 0.2s ease-in-out;
+}
+.contact-first-items:hover .contact-border-effect-c {
+  border: 5px solid white;
 }

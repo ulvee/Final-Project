@@ -1,11 +1,11 @@
 import React from "react";
-import { Input, Spacer, Checkbox } from "@nextui-org/react";
+import { Input, Spacer } from "@nextui-org/react";
 import { Link } from "react-router-dom";
 
 function Register() {
   return (
     <div className="pb-[100px]">
-      <div className="login-bck flex justify-center items-center py-[130px]">
+      <div className="pages-main-bck flex justify-center items-center py-[130px]">
         <h2 className="uppercase text-[white] font-[600] text-[60px] tracking-[5px] pr-[50px]">
           Register
         </h2>

@@ -309,11 +309,29 @@ li {
 }
 .popular-course-img {
   overflow: hidden;
-  img{
+  img {
     transition: all 0.5s ease-in-out;
   }
 }
 .popular-course-img img:hover {
   transform: scale(1.2);
   transition: all 0.5s ease-in-out;
+}
+
+.getstarted-bck {
+  background-image: url("https://coursebuilder.thimpress.com/wp-content/uploads/sites/25/2017/07/layer-31@3x.png?id=264");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.getstarted-bck::before {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.56);
+  opacity: 1;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }

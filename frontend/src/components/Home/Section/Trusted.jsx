@@ -10,7 +10,7 @@ function Trusted() {
   return (
     <section className="trusted-sec py-[150px]" id="target">
       <div className="max-w-[1200px] mx-auto h-[100%]">
-        <div className="h-[100%] flex justify-between items-center">
+        <div className="h-[100%] flex justify-between items-center max-md:flex-col">
           <div className="flex flex-col gap-[50px]">
             <div className="flex flex-col gap-[30px]">
               <div>

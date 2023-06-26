@@ -30,7 +30,7 @@ function TopCourse() {
                 <div
                   className="shadow-lg rounded-[10px] w-[28%] relative"
                   id="topcourse-card"
-                  key={d.price}
+                  key={d.price}   
                 >
                   <img
                     className="h-[240] w-[100%] rounded-t-[10px]"

@@ -1,6 +1,7 @@
 import React from "react";
 import Popular from "../components/CoursesSection/Popular";
 import CoursesDetails from "../components/CoursesSection/CoursesDetails";
+import GetStarted from "../components/CoursesSection/GetStarted";
 
 function Courses() {
   return (
@@ -17,6 +18,7 @@ function Courses() {
       </div>
       <Popular />
       <CoursesDetails />
+      <GetStarted />
     </div>
   );
 }

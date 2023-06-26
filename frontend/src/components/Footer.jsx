@@ -11,10 +11,10 @@ function Footer() {
     <div className="custom-footer pt-[100px] bp-[30px]">
       <div className="max-w-[1200px] mx-auto">
         <div className="flex flex-col">
-          <div className="footer-first-item flex justify-between items-center">
+          <div className="footer-first-item flex justify-between items-center max-md:flex-col">
             <div className="footer-bck relative">
               <img src={BckFooter} alt="" className="w-[100%]" />
-              <div className="bg-[white] flex flex-col w-[85%] gap-[30px] py-[30px] px-[20px] rounded-[10px] absolute top-[10px] left-[20px]">
+              <div className="bg-[white] flex flex-col w-[85%] gap-[30px] py-[30px] px-[20px] rounded-[10px] absolute top-[10px] left-[20px] max-md:none">
                 <div>
                   <img src={LogoKit} alt="" />
                 </div>
@@ -37,7 +37,7 @@ function Footer() {
                 </div>
               </div>
             </div>
-            <div className="flex gap-[50px] text-[white] ">
+            <div className="flex gap-[50px] text-[white]">
               <div className="flex flex-col gap-[20px]">
                 <h2 className="text-[20px] uppercase font-[700]">
                   Useful Links
@@ -62,7 +62,7 @@ function Footer() {
               </div>
             </div>
             <div className="flex flex-col gap-[30px] w-[35%] ">
-              <div className="flex gap-[20px]">
+              <div className="flex gap-[20px] max-md:flex-col">
                 <button className="bg-[#2b2b2b] text-[white] rounded-[8px] py-[12px] px-[30px] flex items-center uppercase gap-[10px]">
                   <AiOutlineApple className="text-[white] text-[25px]" /> App
                   Store

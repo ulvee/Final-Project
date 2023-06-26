@@ -24,7 +24,7 @@ function Popular() {
                   className="w-[100%]"
                 />
                 <span className="bg-white text-[#60d3c6] w-[100px] text-center py-[10px] uppercase absolute bottom-0 left-0">
-                  $ 255
+                  $ 25.00
                 </span>
               </div>
               <div className="flex flex-col gap-[20px] pl-[25px]">
@@ -58,7 +58,7 @@ function Popular() {
                   className="w-[100%]"
                 />
                 <span className="bg-white text-[#60d3c6] w-[100px] text-center py-[10px] uppercase absolute bottom-0 left-0">
-                  $ 1000
+                  $ 74.00
                 </span>
               </div>
               <div className="flex flex-col gap-[20px] pl-[25px]">

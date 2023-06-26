@@ -119,28 +119,26 @@ function Header() {
                       <div className="flex justify-between">
                         <div className="option">
                           <h2 className="mb-[20px]">ABOUT COURSES</h2>
-                          <Link to={"#"}>
-                            <p className="option ">Courses</p>
+                          <Link to={"/courses"}>
+                            <p className="option">Courses</p>
                           </Link>
-
-                          <Link to={"#"}>
-                            <p className="option">Free Access Courses</p>
+                          <Link to={"/courses/category/business"}>
+                            <p className="option">Business</p>
                           </Link>
-
-                          <Link to={"#"}>
-                            <p className="option">Paid Courses</p>
+                          <Link to={"/courses/category/design"}>
+                            <p className="option">Design</p>
                           </Link>
-                          <Link to={"#"}>
-                            <p className="option">Our Teachers</p>
+                          <Link to={"/courses/category/photography"}>
+                            <p className="option">Photography</p>
                           </Link>
-                          <Link to={"#"}>
-                            <p className="option">Become an Instructor</p>
+                          <Link to={"/courses/category/marketing"}>
+                            <p className="option">Marketing</p>
                           </Link>
-                          <Link to={"#"}>
-                            <p className="option">Collections</p>
+                          <Link to={"/courses/category/webdevelopment"}>
+                            <p className="option">Web-Development</p>
                           </Link>
-                          <Link to={"#"}>
-                            <p className="option">Instructor Profile</p>
+                          <Link to={"/courses/category/technology"}>
+                            <p className="option">Technology</p>
                           </Link>
                         </div>
                         <div className="flex gap-[30px]">

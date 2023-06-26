@@ -79,7 +79,7 @@ function Header() {
                       <IoIosArrowDown className="mt-[4px] text-[14px]" />
                     </div>
                   </Link>
-                  <div className="options px-[15px] min-w-[300px] z-50 left-0">
+                  <div className="options px-[15px] min-w-[300px] z-30 left-0">
                     <Link to={"/"}>
                       <li className="option ">Home</li>
                     </Link>
@@ -205,7 +205,7 @@ function Header() {
                     <Link to={"#"}>
                       <li className="option">Shop</li>
                     </Link>
-                    <Link to={"#"}>
+                    <Link to={"/gallery"}>
                       <li className="option">Gallery</li>
                     </Link>
                     <Link to={"/portfolio"}>

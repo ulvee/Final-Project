@@ -16,6 +16,7 @@ import Technology from "./pages/CoursePages/Technology";
 import WebDevelopment from "./pages/CoursePages/WebDevelopment";
 import Marketing from "./pages/CoursePages/Marketing";
 import Photography from "./pages/CoursePages/Photography";
+import Gallery from "./pages/ExtraPages/Gallery";
 
 function App() {
   return (
@@ -28,12 +29,16 @@ function App() {
         <Route path="/pages" element={<Pages />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/portfolio" element={<Portfolio />} />
+        <Route path="/gallery" element={<Gallery />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/courses/category/design" element={<Design />} />
         <Route path="/courses/category/business" element={<Business />} />
         <Route path="/courses/category/technology" element={<Technology />} />
-        <Route path="/courses/category/webdevelopment" element={<WebDevelopment />} />
+        <Route
+          path="/courses/category/webdevelopment"
+          element={<WebDevelopment />}
+        />
         <Route path="/courses/category/marketing" element={<Marketing />} />
         <Route path="/courses/category/photography" element={<Photography />} />
       </Routes>

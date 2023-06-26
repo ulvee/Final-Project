@@ -335,3 +335,14 @@ li {
   left: 0;
   right: 0;
 }
+.gallery-zoom {
+  display: none;
+}
+#gallery-img:hover {
+  .gallery-zoom {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.533);
+  }
+}

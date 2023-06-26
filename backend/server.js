@@ -4,6 +4,7 @@ const dotenv = require("dotenv");
 const cors = require("cors");
 const topCourseRoute = require("./routes/Home/topCourseRoute");
 const Courses = require("./routes/Course/courseRoute");
+const Gallery = require("./routes/Gallery/galleryRoute");
 
 dotenv.config();
 const app = express();
@@ -25,6 +26,8 @@ app.use("/home/topcourse", topCourseRoute);
 // Course
 app.use("/courses", Courses);
 
+// Gallery
+app.use("/gallery", Gallery);
 
 PORT = process.env.PORT;
 app.listen(PORT, () => {

@@ -1,6 +1,6 @@
 const express = require("express")
 const router = express.Router()
-const technologyCourse = require("../../models/Course/technologyCourseModel")
+const technologyCourse = require("../../models/Course/courseModel")
 
 
 const get = async (req,res) => {

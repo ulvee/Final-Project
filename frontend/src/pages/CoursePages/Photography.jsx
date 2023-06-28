@@ -68,9 +68,12 @@ function Photography() {
                 .sort((a, b) =>
                   sortAsc ? a.price - b.price : b.price - a.price
                 )
-                .map((d) => {
+                .map((d, index) => {
                   return (
-                    <div className="w-[30%] flex flex-col bg-[white] pb-[20px] shadow-md gap-[20px]" key={d.price}>
+                    <div
+                      className="w-[30%] flex flex-col bg-[white] pb-[20px] shadow-md gap-[20px]"
+                      key={index}
+                    >
                       <div className="relative popular-course-img">
                         <img
                           src={d.image}

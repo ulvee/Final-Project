@@ -63,18 +63,24 @@ function Register() {
             <div className="flex flex-col gap-[30px] ">
               <input
                 placeholder="Name"
+                type="name"
+                name="name"
                 value={data.name}
                 onChange={(e) => setData({ ...data, name: e.target.value })}
               />
 
               <input
                 placeholder="Email"
+                name="email"
+                type="email"
                 value={data.email}
                 onChange={(e) => setData({ ...data, email: e.target.value })}
               />
 
               <input
                 placeholder="Password"
+                name="password"
+                type="password"
                 value={data.password}
                 onChange={(e) => setData({ ...data, password: e.target.value })}
               />

@@ -29,7 +29,7 @@ function WebDevelopment() {
       <div>
         <div className="pages-main-bck flex justify-center items-center py-[130px]">
           <h2 className="uppercase text-[white] font-[600] text-[60px] tracking-[5px] pr-[50px]">
-          Web-Development
+            Web-Development
           </h2>
           <div className="pl-[50px] text-white">
             <p>THE BEST DEMO EDUCATION</p>
@@ -68,9 +68,12 @@ function WebDevelopment() {
                 .sort((a, b) =>
                   sortAsc ? a.price - b.price : b.price - a.price
                 )
-                .map((d) => {
+                .map((d, index) => {
                   return (
-                    <div className="w-[30%] flex flex-col bg-[white] pb-[20px] shadow-md gap-[20px]" key={d.price}>
+                    <div
+                      className="w-[30%] flex flex-col bg-[white] pb-[20px] shadow-md gap-[20px]"
+                      key={index}
+                    >
                       <div className="relative popular-course-img">
                         <img
                           src={d.image}

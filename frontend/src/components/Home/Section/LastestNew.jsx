@@ -12,7 +12,7 @@ function LastestNew() {
         <div className="flex justify-between items-center">
           <div className="flex flex-col items-start gap-[30px]">
             <div className="flex flex-col gap-[20px]">
-              <h2 className="text-[36px]">Lastest New</h2>
+              <h2 className="text-[36px]">Latest New</h2>
               <p className="text-[gray]">
                 Lorem ipsum dolor sit amet, consectetur <br /> adipisicing elit,
                 sed do eiusmod tempor <br /> incididunt ut

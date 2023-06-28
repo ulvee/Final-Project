@@ -180,7 +180,7 @@ function Header() {
                   onMouseEnter={handleDropdownOpen3}
                   onMouseLeave={handleDropdownClose3}
                 >
-                  <Link to={"/pages"} className="hover:text-[#3eddbf]">
+                  <Link className="hover:text-[#3eddbf]">
                     <div className="selected-option flex items-center gap-[8px] text-[17px]">
                       {selectedOption3 ? selectedOption3 : "Pages"}
                       <IoIosArrowDown className="mt-[4px] text-[14px]" />
@@ -188,28 +188,16 @@ function Header() {
                   </Link>
                   <div className="options px-[15px] min-w-[300px] z-50 left-0">
                     <Link to={"#"}>
-                      <li className="option ">Blog</li>
-                    </Link>
-                    <Link to={"#"}>
-                      <li className="option">Membership</li>
-                    </Link>
-                    <Link to={"#"}>
-                      <li className="option">Landing Page</li>
-                    </Link>
-                    <Link to={"#"}>
-                      <li className="option">Forums</li>
-                    </Link>
-                    <Link to={"#"}>
-                      <li className="option">Events</li>
-                    </Link>
-                    <Link to={"#"}>
                       <li className="option">Shop</li>
                     </Link>
                     <Link to={"/gallery"}>
                       <li className="option">Gallery</li>
                     </Link>
-                    <Link to={"/portfolio"}>
-                      <p className="option">Portfolio</p>
+                    <Link to={"/projects"}>
+                      <li className="option">Portfolio</li>
+                    </Link>
+                    <Link to={"/projects/:id"}>
+                      <li className="option">Detail Page</li>
                     </Link>
                   </div>
                 </div>

@@ -21,7 +21,7 @@ import DetailPage from "./pages/PortfolioPages/DetailPage";
 import axios from "axios";
 import { Toaster } from "react-hot-toast";
 import { UserContextProvider } from "../context/userContext";
-import Dashboard from "./pages/UserPage/Dashboard";
+import Account from "./pages/UserPage/Account";
 
 axios.defaults.baseURL = "http://localhost:8080";
 axios.defaults.withCredentials = true;
@@ -41,7 +41,7 @@ function App() {
           <Route path="/projects" element={<Portfolio />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/account" element={<Account />} />
           <Route path="/register" element={<Register />} />
           <Route path="/courses/category/design" element={<Design />} />
           <Route path="/courses/category/business" element={<Business />} />

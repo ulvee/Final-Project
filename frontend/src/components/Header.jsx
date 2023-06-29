@@ -4,9 +4,19 @@ import { IoIosArrowDown } from "react-icons/io";
 import { IoClose } from "react-icons/io5";
 import { BsFillPersonFill } from "react-icons/bs";
 import modalimg from "../assets/images/modal-image.png";
-import { Input, Spacer, Checkbox } from "@nextui-org/react";
+import { useContext } from "react";
+import { UserContext } from "../../context/userContext";
+import { toast } from "react-hot-toast";
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 function Header() {
+  const navigate = useNavigate();
+  const [data, setData] = useState({
+    email: "",
+    password: "",
+  });
+  const { user } = useContext(UserContext);
   const [isDropdownOpen1, setIsDropdownOpen1] = useState(false);
   const [isDropdownOpen2, setIsDropdownOpen2] = useState(false);
   const [isDropdownOpen3, setIsDropdownOpen3] = useState(false);
@@ -14,6 +24,24 @@ function Header() {
   const [selectedOption2, setSelectedOption2] = useState(null);
   const [selectedOption3, setSelectedOption3] = useState(null);
   const [isOpen, setIsOpen] = useState(false);
+
+  const loginUser = async (e) => {
+    e.preventDefault();
+    const { email, password } = data;
+    try {
+      const { data } = await axios.post("/login", {
+        email,
+        password,
+      });
+      if (data.error) {
+        toast.error(data.error);
+      } else {
+        setData({});
+        closeModal();
+        navigate("/");
+      }
+    } catch (error) {}
+  };
 
   const handleDropdownOpen1 = () => {
     setIsDropdownOpen1(true);
@@ -91,7 +119,7 @@ function Header() {
                     <Link to={"/register"}>
                       <li className="option">Register</li>
                     </Link>
-                    <Link to={"№"}>
+                    <Link to={"/account"}>
                       <p className="option">Account</p>
                     </Link>
                   </div>
@@ -194,10 +222,7 @@ function Header() {
                       <li className="option">Gallery</li>
                     </Link>
                     <Link to={"/projects"}>
-                      <li className="option">Portfolio</li>
-                    </Link>
-                    <Link to={"/projects/:id"}>
-                      <li className="option">Detail Page</li>
+                      <p className="option">Portfolio</p>
                     </Link>
                   </div>
                 </div>
@@ -209,7 +234,7 @@ function Header() {
               </Link>
             </ul>
           </nav>
-          <div className="flex gap-10">
+          <div className="flex gap-10 items-center">
             <button onClick={openModal} className="flex gap-[5px] items-center">
               {" "}
               <BsFillPersonFill /> Login
@@ -228,33 +253,40 @@ function Header() {
                       {" "}
                       <IoClose />{" "}
                     </button>
-                    <form action="" className="flex flex-col gap-[30px]">
+                    <form
+                      action=""
+                      onSubmit={loginUser}
+                      className="flex flex-col gap-[30px]"
+                      id="register-form"
+                    >
                       <h2 className="text-center text-[27px] font-semibold">
                         Login to your account
                       </h2>
-                      <div className="flex flex-col">
-                        <Input
-                          clearable
-                          bordered
-                          color="success"
-                          Placeholder="Username or Email..."
+                      <div className="flex flex-col gap-[30px]">
+                        <input
+                          placeholder="Email..."
+                          name="email"
+                          type="email"
+                          value={data.email}
+                          onChange={(e) =>
+                            setData({ ...data, email: e.target.value })
+                          }
                         />
-                        <Spacer y={1} />
-                        <Input.Password
-                          bordered
-                          color="success"
-                          Placeholder="Password..."
+
+                        <input
+                          placeholder="Password..."
+                          name="password"
+                          type="password"
+                          value={data.password}
+                          onChange={(e) =>
+                            setData({ ...data, password: e.target.value })
+                          }
                         />
                       </div>
-                      <div className="flex gap-[30px] items-center">
-                        <Checkbox defaultSelected size="sm" color="success">
-                          REMEMBER ME
-                        </Checkbox>
-                        <Link to={"#"}>
-                          <li className="list-none">Lost your password?</li>
-                        </Link>
-                      </div>
-                      <button className="py-[12px] px-[20px] bg-teal-400 rounded-[25px] uppercase font-semibold text-[17px] text-[white]">
+                      <button
+                        type="submit"
+                        className="py-[12px] px-[20px] bg-[#1e90ff] rounded-[25px] uppercase font-semibold text-[17px] text-[white]"
+                      >
                         Login
                       </button>
                       <div className="flex justify-center gap-[10px]">
@@ -268,12 +300,14 @@ function Header() {
                 </div>
               </div>
             )}
-            <button
-              className="py-[5px] px-[25px] uppercase font-[600]"
-              id="buy-course"
-            >
-              Buy course
-            </button>
+            <Link to={"/account"}>
+              <button
+                className="py-[10px] px-[35px] font-[600]"
+                id="buy-course"
+              >
+                {!!user && <h2>Hi {user.name}!</h2>}
+              </button>
+            </Link>
           </div>
         </div>
       </div>

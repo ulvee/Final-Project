@@ -3,17 +3,17 @@ import { BsBell, BsBook, BsBriefcase, BsWindowStack } from "react-icons/bs";
 import { IoBulbOutline, IoLogoBuffer } from "react-icons/io5";
 function OurService() {
   return (
-    <div className="py-[100px]">
+    <div className="py-[100px] max-md:px-[50px]">
       <div className="max-w-[1200px] mx-auto">
         <div className=" flex flex-col gap-[70px] justify-center">
           <div className="flex flex-col items-center gap-[20px]">
-            <h2 className="text-[48px] font-[600]">Our Service Categories</h2>
-            <p className="text-[17px] text-[gray]">
+            <h2 className="text-[48px] font-[600] max-md:text-center">Our Service Categories</h2>
+            <p className="text-[17px] text-[gray] max-md:text-center">
               So many academic goals that we expect you to achieve.
             </p>
           </div>
           <div className="flex flex-col gap-[50px]">
-            <div className="flex justify-between">
+            <div className="flex justify-between max-md:flex-col max-md:w-[100%] max-md:gap-[50px]">
               <div className="custom-card-o-service flex gap-[30px]">
                 <div className="mt-[20px]">
                   <IoLogoBuffer className="text-[#3eddbf] text-[40px]" />
@@ -54,7 +54,7 @@ function OurService() {
                 </div>
               </div>
             </div>
-            <div className="flex justify-between">
+            <div className="flex justify-between max-md:flex-col max-md:w-[100%] max-md:gap-[50px]">
               <div className="custom-card-o-service flex gap-[30px]">
                 <div className="mt-[20px]">
                   <BsBell className="text-[#3eddbf] text-[40px]" />

@@ -360,3 +360,84 @@ li {
     border-radius: 10px;
   }
 }
+
+@media (max-width: 768px) {
+  .trusted-counter {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .topcourse-grid {
+    flex-wrap: wrap;
+  }
+  .top-course-category {
+    right: 0;
+  }
+  .topcourse-item {
+    width: 100%;
+    img {
+      height: 300px;
+    }
+  }
+  .latest-card-div {
+    flex-wrap: wrap;
+    gap: 50px;
+    width: 100%;
+    padding: 0 30px 0 30px;
+  }
+  .latest-card-new {
+    width: 100%;
+    padding-left: 30px;
+  }
+  #lastest-card {
+    width: 100%;
+    img {
+      height: 250px;
+    }
+  }
+  #footer-posito-item{
+    display: none;
+  }
+  .header-nav{
+    display: none;
+  }
+  .close-modal-log{
+    display: none;
+  }
+  .pages-main-bck{
+    h2{
+      border: none;
+    }
+  }
+  .con-quote{
+    display: none;
+  }
+  .custom-card-o-service{
+    br{
+      display: none;
+    }
+  }
+  .web-tre{
+    display: none;
+  }
+  .get-start-image{
+    display: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  #footer-posito-item{
+    position: relative;
+    top: -60px;
+  }
+  .web-tre{
+    display: none;
+  }
+  .popular-4-card{
+    display: none;
+  }
+  .footer-mail-addres{
+    display: none;
+  }
+}

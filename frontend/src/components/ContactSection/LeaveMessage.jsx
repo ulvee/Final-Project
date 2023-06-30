@@ -2,31 +2,31 @@ import React from "react";
 
 function LeaveMessage() {
   return (
-    <div className="py-[100px]">
+    <div className="py-[100px] max-md:px-[50px]">
       <div className="max-w-[1200px] mx-auto flex flex-col gap-[50px]">
         <div className="flex flex-col items-center gap-[20px]">
           <h2 className="text-[44px]">Leave a Message</h2>
-          <p className="text-[gray]">
+          <p className="text-[gray] max-md:text-center">
             Your email address will not be published. Required fields are
             marked.
           </p>
         </div>
         <form action="" className="flex flex-col gap-[30px] justify-center items-center w-[100%]">
-          <div className="flex justify-between w-[100%]">
+          <div className="flex justify-between w-[100%] max-md:flex-col max-md:gap-[30px]">
             <input
               type="text"
               placeholder="Name"
-              className="border-[1px] border-[#80808081] rounded-[5px] w-[32%] py-[10px] px-[20px] placeholder:italic placeholder:font-[500] outline-none hover:border-[#60d3c6]"
+              className="border-[1px] border-[#80808081] rounded-[5px] w-[32%] py-[10px] px-[20px] placeholder:italic placeholder:font-[500] outline-none hover:border-[#60d3c6] max-md:w-[100%]"
             />
             <input
               type="text"
               placeholder="Email"
-              className="border-[1px] border-[#80808081] rounded-[5px] w-[32%] py-[10px] px-[20px] placeholder:italic placeholder:font-[500] outline-none hover:border-[#60d3c6]"
+              className="border-[1px] border-[#80808081] rounded-[5px] w-[32%] py-[10px] px-[20px] placeholder:italic placeholder:font-[500] outline-none hover:border-[#60d3c6] max-md:w-[100%]"
             />
             <input
               type="text"
               placeholder="Subject"
-              className="border-[1px] border-[#80808081] rounded-[5px] w-[32%] py-[10px] px-[20px] placeholder:italic placeholder:font-[500] outline-none hover:border-[#60d3c6]"
+              className="border-[1px] border-[#80808081] rounded-[5px] w-[32%] py-[10px] px-[20px] placeholder:italic placeholder:font-[500] outline-none hover:border-[#60d3c6] max-md:w-[100%]"
             />
           </div>
           <textarea

@@ -92,9 +92,9 @@ function Header() {
             />
           </button>
         </Link>
-        <div className="flex gap-[100px]">
-          <nav>
-            <ul className="flex gap-[30px] items-center">
+        <div className="flex gap-[100px] max-lg:gap-[50px]">
+          <nav className="header-nav">
+            <ul className="flex gap-[30px] max-lg:gap-[10px] items-center">
               <div className="dropdown-container z-50">
                 <div
                   className={`dropdown ${isDropdownOpen1 ? "open" : ""}`}
@@ -215,9 +215,6 @@ function Header() {
                     </div>
                   </Link>
                   <div className="options px-[15px] min-w-[300px] z-50 left-0">
-                    <Link to={"#"}>
-                      <li className="option">Shop</li>
-                    </Link>
                     <Link to={"/gallery"}>
                       <li className="option">Gallery</li>
                     </Link>
@@ -241,14 +238,14 @@ function Header() {
             </button>
             {isOpen && (
               <div className="modal-overlay z-50" onClick={handleOverlayClick}>
-                <div className="modal-content flex">
-                  <div className="h-[550px] w-[400px]">
+                <div className="modal-content flex max-md:flex-col">
+                  <div className="h-[550px] w-[400px] max-md:h-[350px]">
                     <img className="w-[100%] h-[100%]" src={modalimg} alt="" />
                   </div>
                   <div className="flex flex-col bg-white w-[400px] relative items-center justify-center px-[20px]">
                     <button
                       onClick={closeModal}
-                      className="text-[25px] absolute top-0 right-0 py-[3px] px-[3px]"
+                      className="text-[25px] close-modal-log absolute top-0 right-0 py-[3px] px-[3px]"
                     >
                       {" "}
                       <IoClose />{" "}
@@ -292,7 +289,7 @@ function Header() {
                       <div className="flex justify-center gap-[10px]">
                         <p>Don't have an account?</p>
                         <Link to={"/register"}>
-                          <li className="list-none text-[#1e90ff] ">Sign up</li>
+                          <button onClick={closeModal} className="list-none text-[#1e90ff] ">Sign up</button>
                         </Link>
                       </div>
                     </form>
@@ -302,10 +299,10 @@ function Header() {
             )}
             <Link to={"/account"}>
               <button
-                className="py-[10px] px-[35px] font-[600]"
+                className="py-[10px] flex gap-[5px] px-[35px] font-[600]"
                 id="buy-course"
               >
-                {!!user && <h2>Hi {user.name}!</h2>}
+               Hi {!!user && <h2> {user.name}!</h2>}
               </button>
             </Link>
           </div>

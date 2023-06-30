@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 function CreateAccount() {
   return (
     <section className="create-account py-[15px]">
-      <div className="max-w-[1200px] mx-auto">
+      <div className="max-w-[1200px] mx-auto max-lg:px-[20px] max-xl:px-[20px]">
         <div className="flex justify-between">
           <div className="flex flex-col items-start justify-center gap-[40px]">
             <h2 className="text-[30px]">Create Your Free Account</h2>

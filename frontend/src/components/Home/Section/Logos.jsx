@@ -8,7 +8,7 @@ import Client5 from "../../../assets/images/client-5.png";
 function Logos() {
   return (
     <section className="bg-[#e7e7e7] py-[100px]">
-      <div className="max-w-[1200px] mx-auto">
+      <div className="max-w-[1200px] mx-auto max-lg:mx-[20px] max-xl:px-[20px]">
         <div className="flex justify-between items-center">
           <div className="client-img">
             <img src={Client1} alt="" />

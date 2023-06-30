@@ -7,7 +7,7 @@ function FirstSection() {
   return (
     <div className="py-[100px] bg-[#2174ff]">
       <div className="max-w-[1200px] mx-auto">
-        <div className="flex justify-between">
+        <div className="flex justify-between max-md:flex-col max-md:items-center max-md:gap-[50px]">
           <div className="flex flex-col items-center w-[32%] gap-[40px] contact-first-items">
             <div className="w-[200px] rounded-[50%] h-[200px] flex justify-center items-center border-[2px] border-[white] contact-border-effect-c">
               <MdLocationOn className="text-[70px] text-white" />

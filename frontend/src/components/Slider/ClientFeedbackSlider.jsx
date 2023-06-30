@@ -27,7 +27,7 @@ function ClientFeedbackSlider() {
         onSlideChange={() => console.log("slide change")}
       >
         <SwiperSlide>
-          <div className="flex flex-col items-center gap-[25px]">
+          <div className="flex flex-col items-center gap-[25px] max-md:px-[100px] max-lg:px-[60px]">
             <div className="w-[100px] h-[100px] rounded-[50%] flex justify-center">
               <img
                 src={SlidePhoto1}
@@ -60,7 +60,7 @@ function ClientFeedbackSlider() {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="flex flex-col items-center gap-[25px]">
+          <div className="flex flex-col items-center gap-[25px] max-md:px-[100px] max-lg:px-[60px]">
             <div className="w-[100px] h-[100px] rounded-[50%] flex justify-center">
               <img
                 src={SlidePhoto2}
@@ -93,7 +93,7 @@ function ClientFeedbackSlider() {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="flex flex-col items-center gap-[25px]">
+          <div className="flex flex-col items-center gap-[25px] max-md:px-[100px] max-lg:px-[60px]">
             <div className="w-[100px] h-[100px] rounded-[50%] flex justify-center">
               <img
                 src={SlidePhoto3}

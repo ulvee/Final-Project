@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { BsFillStarFill } from "react-icons/bs";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 function TopCourse() {
   const [data, setData] = useState([]);
@@ -24,11 +25,11 @@ function TopCourse() {
               eiusmod <br /> tempor incididunt ut labore et dolore magna aliqua.
             </p>
           </div>
-          <div className="flex flex-wrap w-[100%] gap-[50px] justify-between">
+          <div className="flex topcourse-grid flex-wrap justify-center w-[100%] gap-[50px] max-md:px-[50px]">
             {data.map((d) => {
               return (
                 <div
-                  className="shadow-lg rounded-[10px] w-[28%] relative"
+                  className="shadow-lg rounded-[10px] w-[28%] relative topcourse-item"
                   id="topcourse-card"
                   key={d.category}
                 >
@@ -37,7 +38,7 @@ function TopCourse() {
                     src={d.image}
                     alt=""
                   />
-                  <span className="bg-[#84cdf0] py-[8px] px-[25px] text-[white] uppercase font-[700] rounded-[5px] absolute top-[10px] right-[-20px]">
+                  <span className="bg-[#84cdf0] top-course-category py-[8px] px-[25px] text-[white] uppercase font-[700] rounded-[5px] absolute top-[10px] right-[-20px] max-lg:right-0">
                     {d.category}
                   </span>
                   <div
@@ -65,12 +66,14 @@ function TopCourse() {
               );
             })}
           </div>
-          <button
-            className="py-[10px] px-[30px] uppercase font-[700]"
-            id="buy-course"
-          >
-            View All Courses
-          </button>
+          <Link to={"/courses"}>
+            <button
+              className="py-[10px] px-[30px] uppercase font-[700]"
+              id="buy-course"
+            >
+              View All Courses
+            </button>
+          </Link>
         </div>
       </div>
     </section>

@@ -4,15 +4,15 @@ import PeoplePhoto from "../../assets/images/mbr-4-min.jpg";
 function OurEducation() {
   return (
     <div>
-      <div className="flex">
-        <div className="w-[50%] relative">
+      <div className="flex max-md:flex-col max-lg:flex-col">
+        <div className="w-[50%] relative max-md:w-[100%] max-lg:w-[100%]">
           <img src={PeoplePhoto} alt="" className="w-[100%]" />
           <span className="text-[120px] font-[700] text-[white] absolute top-[70px] right-[50px]">
             03
           </span>
         </div>
 
-        <div className="our-about-bck w-[50%] flex flex-col justify-center gap-[30px] px-[50px]">
+        <div className="our-about-bck w-[50%] flex flex-col justify-center gap-[30px] px-[50px] max-md:w-[100%] max-lg:w-[100%]">
           <div>
             <h2 className="text-[40px] text-[#000000b4]">Our Education</h2>
             <p className="text-[17px] text-[gray]">

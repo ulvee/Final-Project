@@ -6,10 +6,10 @@ function OurContact() {
   return (
     <div className="our-contact-bck py-[100px]">
       <div className="max-w-[1200px] mx-auto">
-        <div className="flex flex-col gap-[50px]">
+        <div className="flex flex-col gap-[50px] max-md:px-[30px]">
           <OurContactSlider />
           <div className="flex gap-[50px] flex-col items-center">
-            <div className="flex gap-[100px]">
+            <div className="flex gap-[100px] max-md:flex-col">
               <div className="flex flex-col gap-[20px]">
                 {" "}
                 <div className="w-[100px] h-[100px] bg-[#808080bd] z-30 flex justify-center items-center rounded-[50%]">

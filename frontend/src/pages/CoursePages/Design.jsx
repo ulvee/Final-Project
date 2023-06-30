@@ -27,20 +27,20 @@ function Design() {
   return (
     <div className="flex flex-col">
       <div>
-        <div className="pages-main-bck flex justify-center items-center py-[130px]">
-          <h2 className="uppercase text-[white] font-[600] text-[60px] tracking-[5px] pr-[50px]">
-            Design
-          </h2>
-          <div className="pl-[50px] text-white">
+      <div className="pages-main-bck flex justify-center items-center py-[130px] max-md:flex-col max-md:gap-[50px]">
+        <h2 className="uppercase text-[white] font-[600] text-[60px] tracking-[5px] pr-[50px] max-md:pr-0">
+          Design
+        </h2>
+        <div className="pl-[50px] text-white max-md:pl-0 max-md:text-center">
             <p>THE BEST DEMO EDUCATION</p>
             <span>It is a long established fact that a reade.</span>
           </div>
         </div>
         <Popular />
       </div>
-      <div className="max-w-[1200px] mx-auto py-[100px]">
-        <div className="flex justify-between">
-          <div className="w-[75%] flex flex-col gap-[40px]">
+      <div className="max-w-[1200px] mx-auto py-[100px] max-lg:px-[30px] max-xl:px-[30px]">
+        <div className="flex justify-between max-md:flex-col max-md:gap-[50px] max-lg:justify-center max-lg:gap-[50px] max-xl:justify-center max-xl:gap-[50px]">
+          <div className="w-[75%] flex flex-col gap-[40px] max-md:w-[100%] max-md:px-[30px] max-lg:w-[70%]">
             <div className="w-[100%] flex gap-[50px] justify-between">
               <button
                 onClick={toggle}
@@ -50,7 +50,7 @@ function Design() {
               </button>
               <form
                 action=""
-                className="w-[30%] flex border-b-[1px] py-[5px] px-[10px] border-[#00808085]"
+                className="w-[30%] flex border-b-[1px] py-[5px] px-[10px] border-[#00808085] max-md:w-[50%]"
               >
                 <input
                   type="text"
@@ -63,19 +63,22 @@ function Design() {
               </form>
             </div>
 
-            <div className="flex flex-wrap justify-between gap-[40px]">
+            <div className="flex flex-wrap gap-[43px] max-lg:gap-[34px] max-xl:gap-[34px]">
               {filteredData
                 .sort((a, b) =>
                   sortAsc ? a.price - b.price : b.price - a.price
                 )
                 .map((d, index) => {
                   return (
-                    <div className="w-[30%] flex flex-col bg-[white] pb-[20px] shadow-md gap-[20px]" key={index}>
+                    <div
+                      className="w-[30%] flex flex-col bg-[white] pb-[20px] shadow-md gap-[20px] max-md:w-[100%] max-lg:w-[46%] max-xl:w-[30%] "
+                      key={index}
+                    >
                       <div className="relative popular-course-img">
                         <img
                           src={d.image}
                           alt=""
-                          className="w-[100%] h-[250px]"
+                          className="w-[100%] h-[250px] max-md:h-[370px]"
                         />
                         <span className="text-white bg-[#60d3c6] py-[12px] px-[25px] absolute top-[20px] uppercase font-[600] text-[18px] shadow-md right-0">
                           {d.category}

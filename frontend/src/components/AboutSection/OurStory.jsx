@@ -4,15 +4,15 @@ import GirlPhoto from "../../assets/images/girl-1797769.png";
 function OurStory() {
   return (
     <div>
-      <div className="flex">
-        <div className="w-[50%] relative">
+      <div className="flex max-md:flex-col max-lg:flex-col">
+        <div className="w-[50%] relative max-md:w-[100%] max-lg:w-[100%]">
           <img src={GirlPhoto} alt="" className="w-[100%]" />
           <span className="text-[120px] font-[700] text-[white] absolute top-[70px] right-[50px]">
             01
           </span>
         </div>
 
-        <div className="our-about-bck w-[50%] flex flex-col justify-center gap-[30px] px-[50px]">
+        <div className="our-about-bck w-[50%] flex flex-col justify-center gap-[30px] px-[50px] max-md:w-[100%] max-lg:w-[100%]">
           <div>
             <h2 className="text-[40px] text-[#000000b4]">Our Story</h2>
             <p className="text-[17px] text-[gray]">

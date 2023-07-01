@@ -26,7 +26,7 @@ const PlacementExample = () => {
   return (
     <>
       <Button onClick={onOpen} colorScheme="whiteAlpha">
-        <RxHamburgerMenu className="text-[30px] text-[black]" />
+        <RxHamburgerMenu className="text-[31px] text-[black]" />
       </Button>
       <Drawer placement={placement} onClose={onClose} isOpen={isOpen}>
         <DrawerOverlay />

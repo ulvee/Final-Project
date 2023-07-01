@@ -77,15 +77,15 @@ function Sidebar() {
                     </AccordionButton>
                   </h2>
                   <AccordionPanel pb={4} display='flex' flexDirection='column' rowGap='10px' textColor='white' paddingLeft='7'>
-                    <Link to={"/"}>
+                    <Link to={"/admin/post/courses"}>
                       <li className="option ">Courses</li>
                     </Link>
 
-                    <Link to={"/login"}>
+                    <Link to={"/admin/post/gallery"}>
                       <li className="option">Gallery</li>
                     </Link>
 
-                    <Link to={"/register"}>
+                    <Link to={"/admin/post/projects"}>
                       <li className="option">Project</li>
                     </Link>
                   </AccordionPanel>

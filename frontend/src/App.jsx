@@ -26,7 +26,9 @@ import Admin from "./Admin/pages/Admin";
 import CoursesDashboard from "./Admin/components/CoursesDashboard";
 import GalleryDashboard from "./Admin/components/GalleryDashboard";
 import PortfolioDashboard from "./Admin/components/PortfolioDashboard";
-import PostItems from "./Admin/pages/PostItems";
+import CoursePost from "./Admin/components/Post/CoursePost";
+import GalleryPost from "./Admin/components/Post/GalleryPost";
+import ProjectPost from "./Admin/components/Post/ProjectPost";
 
 axios.defaults.baseURL = "http://localhost:8080";
 axios.defaults.withCredentials = true;
@@ -69,7 +71,9 @@ function App() {
           <Route path="/admin/courses" element={<CoursesDashboard />} />
           <Route path="/admin/gallery" element={<GalleryDashboard />} />
           <Route path="/admin/project" element={<PortfolioDashboard />} />
-          <Route path="/admin/post" element={<PostItems />} />
+          <Route path="/admin/post/courses" element={<CoursePost />} />
+          <Route path="/admin/post/gallery" element={<GalleryPost />} />
+          <Route path="/admin/post/projects" element={<ProjectPost />} />
         </Routes>
         {!isAdminPage && <Footer />}
       </UserContextProvider>

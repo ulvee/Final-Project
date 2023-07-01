@@ -1,5 +1,5 @@
 import React from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Courses from "./pages/Courses";
@@ -22,15 +22,24 @@ import axios from "axios";
 import { Toaster } from "react-hot-toast";
 import { UserContextProvider } from "../context/userContext";
 import Account from "./pages/UserPage/Account";
+import Admin from "./Admin/pages/Admin";
+import CoursesDashboard from "./Admin/components/CoursesDashboard";
+import GalleryDashboard from "./Admin/components/GalleryDashboard";
+import PortfolioDashboard from "./Admin/components/PortfolioDashboard";
+import PostItems from "./Admin/pages/PostItems";
 
 axios.defaults.baseURL = "http://localhost:8080";
 axios.defaults.withCredentials = true;
 
 function App() {
+  const location = useLocation();
+
+  const isAdminPage = location.pathname.startsWith("/admin");
+
   return (
     <>
       <UserContextProvider>
-        <Header />
+        {!isAdminPage && <Header />}
         <Toaster position="bottom-right" toastOptions={{ duration: 2000 }} />
         <Routes>
           <Route path="/" element={<Home />} />
@@ -56,8 +65,13 @@ function App() {
             element={<Photography />}
           />
           <Route path="/projects/:id" element={<DetailPage />}></Route>
+          <Route path="/admin" element={<Admin />} />
+          <Route path="/admin/courses" element={<CoursesDashboard />} />
+          <Route path="/admin/gallery" element={<GalleryDashboard />} />
+          <Route path="/admin/project" element={<PortfolioDashboard />} />
+          <Route path="/admin/post" element={<PostItems />} />
         </Routes>
-        <Footer />
+        {!isAdminPage && <Footer />}
       </UserContextProvider>
     </>
   );

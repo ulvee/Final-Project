@@ -9,6 +9,7 @@ import { UserContext } from "../../context/userContext";
 import { toast } from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import BurgerMenu from "./BurgerMenu";
 
 function Header() {
   const navigate = useNavigate();
@@ -84,14 +85,22 @@ function Header() {
   return (
     <header className="py-[15px]" id="header">
       <div className="max-w-[1200px] mx-auto flex items-center justify-between">
-        <Link to={"/"}>
-          <button>
-            <img
-              src="	https://coursebuilder.thimpress.com/demo-kit/wp-content/uploads/sites/25/2019/10/logo-kit.png"
-              alt=""
-            />
-          </button>
-        </Link>
+        <div className="flex items-center gap-[20px]">
+          <div className="hamburger-icon">
+            {" "}
+            <BurgerMenu />
+          </div>
+
+          <Link to={"/"}>
+            <button>
+              <img
+                src="	https://coursebuilder.thimpress.com/demo-kit/wp-content/uploads/sites/25/2019/10/logo-kit.png"
+                alt=""
+              />
+            </button>
+          </Link>
+        </div>
+
         <div className="flex gap-[100px] max-lg:gap-[50px]">
           <nav className="header-nav">
             <ul className="flex gap-[30px] max-lg:gap-[10px] items-center">
@@ -289,7 +298,12 @@ function Header() {
                       <div className="flex justify-center gap-[10px]">
                         <p>Don't have an account?</p>
                         <Link to={"/register"}>
-                          <button onClick={closeModal} className="list-none text-[#1e90ff] ">Sign up</button>
+                          <button
+                            onClick={closeModal}
+                            className="list-none text-[#1e90ff] "
+                          >
+                            Sign up
+                          </button>
                         </Link>
                       </div>
                     </form>
@@ -302,7 +316,7 @@ function Header() {
                 className="py-[10px] flex gap-[5px] px-[35px] font-[600]"
                 id="buy-course"
               >
-               Hi {!!user && <h2> {user.name}!</h2>}
+                Hi {!!user && <h2> {user.name}!</h2>}
               </button>
             </Link>
           </div>

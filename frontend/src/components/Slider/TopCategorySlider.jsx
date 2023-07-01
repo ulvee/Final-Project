@@ -15,7 +15,7 @@ function TopCategorySlider() {
       <Swiper
         modules={[Autoplay, A11y]}
         spaceBetween={30}
-        slidesPerView={4}
+        slidesPerView={3}
         autoplay
         pagination={{ clickable: true }}
         onSwiper={(swiper) => console.log(swiper)}

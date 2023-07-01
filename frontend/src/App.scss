@@ -396,48 +396,61 @@ li {
       height: 250px;
     }
   }
-  #footer-posito-item{
+  #footer-posito-item {
     display: none;
   }
-  .header-nav{
+  .header-nav {
     display: none;
   }
-  .close-modal-log{
+  .close-modal-log {
     display: none;
   }
-  .pages-main-bck{
-    h2{
+  .pages-main-bck {
+    h2 {
       border: none;
     }
   }
-  .con-quote{
+  .con-quote {
     display: none;
   }
-  .custom-card-o-service{
-    br{
+  .custom-card-o-service {
+    br {
       display: none;
     }
   }
-  .web-tre{
+  .web-tre {
     display: none;
   }
-  .get-start-image{
+  .get-start-image {
     display: none;
   }
 }
 
 @media (max-width: 1024px) {
-  #footer-posito-item{
+  #footer-posito-item {
     position: relative;
     top: -60px;
   }
-  .web-tre{
+  .web-tre {
     display: none;
   }
-  .popular-4-card{
+  .popular-4-card {
     display: none;
   }
-  .footer-mail-addres{
+  .footer-mail-addres {
+    display: none;
+  }
+}
+
+.hamburger-icon {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .hamburger-icon {
+    display: block;
+  }
+  .header-nav {
     display: none;
   }
 }

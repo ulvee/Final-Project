@@ -1,7 +1,6 @@
 import React from "react";
 import { useContext } from "react";
 import { UserContext } from "../../../context/userContext";
-import { Link } from "react-router-dom";
 
 function Account() {
   const { user } = useContext(UserContext);

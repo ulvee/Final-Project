@@ -5,11 +5,16 @@ import SidebarCourse from "./sidebarCourse";
 
 function CoursesDetails() {
   const [data, setData] = useState([]);
+  const [value, setValue] = useState("");
   const [sortAsc, setSortAsc] = useState(true);
 
   const getData = async () => {
     const res = await axios.get("http://localhost:8080/courses");
     setData(res.data);
+  };
+
+  const checkData = (e) => {
+    setValue(e.target.value);
   };
 
   const toggle = () => {
@@ -24,13 +29,20 @@ function CoursesDetails() {
         <div className="flex justify-between max-md:flex-col max-md:gap-[50px] max-lg:justify-center max-lg:gap-[50px] max-xl:justify-center max-xl:gap-[50px]">
           <div className="w-[75%] flex flex-col gap-[40px] max-md:w-[100%] max-md:px-[30px] max-lg:w-[70%]">
             <div className="w-[100%] flex gap-[50px] justify-between">
-              <button onClick={toggle} className="bg-[#60d3c6] px-[20px] rounded-[7px] text-[white] font-[600] text-[17px] uppercase">Sort by Price</button>
+              <button
+                onClick={toggle}
+                className="bg-[#60d3c6] px-[20px] rounded-[7px] text-[white] font-[600] text-[17px] uppercase"
+              >
+                Sort by Price
+              </button>
               <form
                 action=""
                 className="w-[30%] flex border-b-[1px] py-[5px] px-[10px] border-[#00808085] max-md:w-[50%]"
               >
                 <input
                   type="text"
+                  value={value}
+                  onChange={checkData}
                   placeholder="Search our courses..."
                   className=" outline-none w-[100%]"
                 />
@@ -42,6 +54,9 @@ function CoursesDetails() {
 
             <div className="flex flex-wrap gap-[43px] max-lg:gap-[34px] max-xl:gap-[34px]">
               {data
+                .filter((item) =>
+                  item.category.toLowerCase().includes(value.toLowerCase())
+                )
                 .sort((a, b) =>
                   sortAsc ? a.price - b.price : b.price - a.price
                 )

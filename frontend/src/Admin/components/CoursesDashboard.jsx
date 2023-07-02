@@ -2,22 +2,75 @@ import React, { useEffect, useState } from "react";
 import { IoSearchSharp } from "react-icons/io5";
 import axios from "axios";
 import Sidebar from "./SidebarDashboard";
+import {
+  AlertDialog,
+  AlertDialogBody,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogContent,
+  Button,
+  useDisclosure,
+  AlertDialogOverlay,
+} from "@chakra-ui/react";
 
 function CoursesDashboard() {
   const [data, setData] = useState([]);
   const [sortAsc, setSortAsc] = useState(true);
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const cancelRef = React.useRef();
+  const [selectedData, setSelectedData] = useState(null);
+  const [updatedData, setUpdatedData] = useState({
+    id: "",
+    image: "",
+    title: "",
+    category: "",
+    price: 0,
+  });
 
   const getData = async () => {
     const res = await axios.get("http://localhost:8080/courses");
     setData(res.data);
   };
 
+  const deleteData = async (id) => {
+    await axios.delete(`http://localhost:8080/courses/${id}`);
+    await getData();
+    onClose();
+  };
+
   const toggle = () => {
     setSortAsc((prevSortAsc) => !prevSortAsc);
   };
+
+  const handleUpdate = (d) => {
+    setUpdatedData({
+      id: d._id,
+      image: d.image,
+      title: d.title,
+      category: d.category,
+      price: d.price,
+    });
+    setSelectedData(d);
+    onOpen(); 
+  };
+
+  const updateData = async () => {
+    try {
+      await axios.put(
+        `http://localhost:8080/courses/${updatedData.id}`,
+        updatedData
+      );
+      await getData();
+      onClose();
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
   useEffect(() => {
     getData();
   }, []);
+
   return (
     <div className="flex">
       <Sidebar />
@@ -72,6 +125,21 @@ function CoursesDashboard() {
                         <div className="flex flex-col gap-[20px] pl-[25px]">
                           <p className="text-[17px]">{d.title}</p>
                         </div>
+                        <div className="flex justify-between px-[25px]">
+                          <Button
+                            colorScheme="red"
+                            onClick={() => deleteData(d._id)}
+                          >
+                            Delete Item
+                          </Button>
+
+                          <Button
+                            colorScheme="blue"
+                            onClick={() => handleUpdate(d)}
+                          >
+                            Update Item
+                          </Button>
+                        </div>
                       </div>
                     );
                   })}
@@ -80,6 +148,106 @@ function CoursesDashboard() {
           </div>
         </div>
       </div>
+
+      {selectedData && (
+        <div>
+          <AlertDialog
+            isOpen={isOpen}
+            leastDestructiveRef={cancelRef}
+            onClose={onClose}
+          >
+            <AlertDialogOverlay>
+              <AlertDialogContent>
+                <AlertDialogHeader fontSize="lg" fontWeight="bold">
+                  Update Item
+                </AlertDialogHeader>
+
+                <AlertDialogBody>
+                  <form className="flex flex-col gap-[20px]" id="register-form">
+                    <div className="flex flex-col">
+                      <label htmlFor="image" className="px-[5px] pb-[5px]">
+                        Image
+                      </label>
+                      <input
+                        type="text"
+                        id="image"
+                        value={updatedData.image}
+                        onChange={(e) =>
+                          setUpdatedData({
+                            ...updatedData,
+                            image: e.target.value,
+                          })
+                        }
+                      />
+                    </div>
+
+                    <div className="flex flex-col">
+                      <label htmlFor="title" className="px-[5px] pb-[5px]">
+                        Title
+                      </label>
+                      <input
+                        type="text"
+                        id="title"
+                        value={updatedData.title}
+                        onChange={(e) =>
+                          setUpdatedData({
+                            ...updatedData,
+                            title: e.target.value,
+                          })
+                        }
+                      />
+                    </div>
+
+                    <div className="flex flex-col">
+                      <label htmlFor="category" className="px-[5px] pb-[5px]">
+                        Category
+                      </label>
+                      <input
+                        type="text"
+                        id="category"
+                        value={updatedData.category}
+                        onChange={(e) =>
+                          setUpdatedData({
+                            ...updatedData,
+                            category: e.target.value,
+                          })
+                        }
+                      />
+                    </div>
+
+                    <div className="flex flex-col">
+                      {" "}
+                      <label htmlFor="price" className="px-[5px] pb-[5px]">
+                        Price
+                      </label>
+                      <input
+                        type="number"
+                        id="price"
+                        value={updatedData.price}
+                        onChange={(e) =>
+                          setUpdatedData({
+                            ...updatedData,
+                            price: e.target.value,
+                          })
+                        }
+                      />
+                    </div>
+                  </form>
+                </AlertDialogBody>
+
+                <AlertDialogFooter>
+                  <Button ref={cancelRef} onClick={onClose}>
+                    Cancel
+                  </Button>
+                  <Button colorScheme="blue" onClick={updateData} ml={3}>
+                    Update
+                  </Button>
+                </AlertDialogFooter>
+              </AlertDialogContent>
+            </AlertDialogOverlay>
+          </AlertDialog>
+        </div>
+      )}
     </div>
   );
 }

@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import { toast } from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 function Admin() {
   const navigate = useNavigate();
@@ -30,6 +31,10 @@ function Admin() {
   };
   return (
     <div className="pb-[100px]">
+       <Helmet>
+        <title>Admin</title>
+        <meta name="description" content="Helmet application" />
+    </Helmet>
       <div className="max-w-[550px] mx-auto border-[#1e90ff] border-[3px] rounded-[7px] py-[50px] px-[70px] mt-[100px]">
         <form
           action=""

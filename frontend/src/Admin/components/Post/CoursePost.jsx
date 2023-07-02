@@ -4,6 +4,7 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import axios from "axios";
 import Sidebar from "../SidebarDashboard";
+import { Helmet } from "react-helmet";
 
 function CoursePost() {
   const {
@@ -29,6 +30,10 @@ function CoursePost() {
 
   return (
     <div className="flex">
+      <Helmet>
+        <title>Admin</title>
+        <meta name="description" content="Helmet application" />
+    </Helmet>
       <Sidebar />
       <div className="w-[80%] admin-right-background px-[100px] py-[30px] flex flex-col gap-[50px]">
       <h1 className="bg-[#00000093] px-[30px] py-[10px] text-[25px] text-[white] font-bold uppercase rounded-[20px]">

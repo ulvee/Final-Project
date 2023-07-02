@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { IoSearchSharp } from "react-icons/io5";
 import axios from "axios";
 import SidebarCourse from "../../components/CoursesSection/sidebarCourse";
 import Popular from "../../components/CoursesSection/Popular";
 import GetStarted from "../../components/CoursesSection/GetStarted";
+import { Helmet } from "react-helmet";
 
 function WebDevelopment() {
   const [data, setData] = useState([]);
@@ -26,6 +26,10 @@ function WebDevelopment() {
 
   return (
     <div className="flex flex-col w-[100%]">
+      <Helmet>
+        <title>Web-Development</title>
+        <meta name="description" content="Helmet application" />
+      </Helmet>
       <div className="w-100%">
         <div className="pages-main-bck flex justify-center items-center py-[130px] max-md:flex-col max-md:gap-[50px]">
           <h2 className="uppercase text-[white] font-[600] text-[60px] tracking-[5px] pr-[50px] max-md:pr-0 max-md:text-center max-md:flex max-md:flex-col max-lg:flex max-lg:flex-col">

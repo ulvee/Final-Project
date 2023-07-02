@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Modal from "react-modal";
 import { useNavigate } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 function Portfolio() {
   const [data, setData] = useState([]);
@@ -26,6 +27,10 @@ function Portfolio() {
   };
   return (
     <div>
+      <Helmet>
+        <title>Portfolio</title>
+        <meta name="description" content="Helmet application" />
+    </Helmet>
       <div>
         <div className="pages-main-bck flex justify-center items-center py-[130px] max-md:flex-col max-md:gap-[50px]">
           <h2 className="uppercase text-[white] font-[600] text-[60px] tracking-[5px] pr-[50px] max-md:pr-0">

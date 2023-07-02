@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 function NotFound() {
   return (
@@ -7,6 +8,10 @@ function NotFound() {
       className="error"
       style={{ backgroundColor: "#030005", height: "90vh" }}
     >
+      <Helmet>
+        <title>Not-Found</title>
+        <meta name="description" content="Helmet application" />
+      </Helmet>
       <div style={{ textAlign: "center" }}>
         <h1>404</h1>
         <h2>Page Not Found</h2>

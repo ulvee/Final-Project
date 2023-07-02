@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import axios from "axios";
+import { Helmet } from "react-helmet";
 
 function DetailPage() {
   const params = useParams();
@@ -22,6 +23,10 @@ function DetailPage() {
 
   return (
     <div className="bg-[#8b8b8b37]">
+       <Helmet>
+        <title>Details</title>
+        <meta name="description" content="Helmet application" />
+    </Helmet>
       <div>
       <div className="pages-main-bck flex justify-center items-center py-[130px] max-md:flex-col max-md:gap-[50px]">
         <h2 className="uppercase text-[white] font-[600] text-[60px] tracking-[5px] pr-[50px] max-md:pr-0">

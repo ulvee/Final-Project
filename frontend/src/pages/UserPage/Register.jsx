@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import { toast } from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 function Register() {
   const navigate = useNavigate();
@@ -39,6 +40,10 @@ function Register() {
 
   return (
     <div className="pb-[100px]">
+      <Helmet>
+        <title>Register</title>
+        <meta name="description" content="Helmet application" />
+      </Helmet>
       <div className="pages-main-bck flex justify-center items-center py-[130px] max-md:flex-col max-md:gap-[50px]">
         <h2 className="uppercase text-[white] font-[600] text-[60px] tracking-[5px] pr-[50px] max-md:pr-0">
           Register

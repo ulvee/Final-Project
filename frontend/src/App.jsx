@@ -3,7 +3,6 @@ import { Routes, Route, useLocation } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Courses from "./pages/Courses";
-import Pages from "./pages/Pages";
 import Contact from "./pages/Contact";
 import Header from "./components/Header";
 import Portfolio from "./pages/ExtraPages/Portfolio";
@@ -52,7 +51,6 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/courses" element={<Courses />} />
-          <Route path="/pages" element={<Pages />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/projects" element={<Portfolio />} />
           <Route path="/gallery" element={<Gallery />} />

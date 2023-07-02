@@ -13,6 +13,7 @@ import {
   useDisclosure,
   AlertDialogOverlay,
 } from "@chakra-ui/react";
+import { Helmet } from "react-helmet";
 
 function PortfolioDashboard() {
   const [data, setData] = useState([]);
@@ -74,6 +75,10 @@ function PortfolioDashboard() {
   };
   return (
     <div className="flex">
+      <Helmet>
+        <title>Admin</title>
+        <meta name="description" content="Helmet application" />
+    </Helmet>
       <Sidebar />
       <div className="px-[100px] py-[30px] flex flex-col gap-[30px] w-[80%] mx-auto max-xl:px-[30px] max-md:py-[50px] admin-right-background">
       <h1 className="bg-[#00000093] px-[30px] py-[10px] text-[25px] text-[white] font-bold uppercase rounded-[20px]">Projects</h1>

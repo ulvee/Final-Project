@@ -4,6 +4,7 @@ import OurValues from "../components/AboutSection/OurValues";
 import OurEducation from "../components/AboutSection/OurEducation";
 import OurService from "../components/AboutSection/OurService";
 import OurContact from "../components/AboutSection/OurContact";
+import {Helmet} from "react-helmet";
 
 function About() {
   const ourStoryRef = useRef(null);
@@ -22,6 +23,10 @@ function About() {
 
   return (
     <div className="about-page-main">
+      <Helmet>
+        <title>About</title>
+        <meta name="description" content="Helmet application" />
+      </Helmet>
       <div className="pages-main-bck flex justify-center items-center py-[130px] max-md:flex-col max-md:gap-[50px]">
         <h2 className="uppercase text-[white] font-[600] text-[60px] tracking-[5px] pr-[50px] max-md:pr-0">
           About Us

@@ -4,6 +4,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import axios from "axios";
 import { GallerySchema } from "../../schema/GalleryForm";
 import Sidebar from "../SidebarDashboard";
+import { Helmet } from "react-helmet";
 
 function GalleryPost() {
   const {
@@ -26,6 +27,10 @@ function GalleryPost() {
 
   return (
     <div className="flex">
+      <Helmet>
+        <title>Admin</title>
+        <meta name="description" content="Helmet application" />
+    </Helmet>
       <Sidebar />
       <div className="w-[80%] flex flex-col admin-right-background px-[100px] relative justify-center">
         <h1 className="bg-[#00000093] px-[30px] py-[10px] text-[25px] text-[white] absolute w-[83%] top-[30px] font-bold uppercase rounded-[20px] max-xl:w-[80%] max-lg:w-[70%] max-md:w-[60%]">

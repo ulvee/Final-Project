@@ -3,6 +3,7 @@ import axios from "axios";
 import SidebarCourse from "../../components/CoursesSection/sidebarCourse";
 import Popular from "../../components/CoursesSection/Popular";
 import GetStarted from "../../components/CoursesSection/GetStarted";
+import { Helmet } from "react-helmet";
 
 function Language() {
   const [data, setData] = useState([]);
@@ -25,6 +26,10 @@ function Language() {
 
   return (
     <div className="flex flex-col">
+       <Helmet>
+        <title>Language</title>
+        <meta name="description" content="Helmet application" />
+    </Helmet>
       <div>
         <div className="pages-main-bck flex justify-center items-center py-[130px] max-md:flex-col max-md:gap-[50px]">
           <h2 className="uppercase text-[white] font-[600] text-[60px] tracking-[5px] pr-[50px] max-md:pr-0">

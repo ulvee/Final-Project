@@ -30,6 +30,7 @@ import CoursePost from "./Admin/components/Post/CoursePost";
 import GalleryPost from "./Admin/components/Post/GalleryPost";
 import ProjectPost from "./Admin/components/Post/ProjectPost";
 import Dashboard from "./Admin/components/Dashboard";
+import Collections from "./pages/CoursePages/Collections";
 
 axios.defaults.baseURL = "http://localhost:8080";
 axios.defaults.withCredentials = true;
@@ -58,6 +59,7 @@ function App() {
           <Route path="/courses/category/design" element={<Design />} />
           <Route path="/courses/category/business" element={<Business />} />
           <Route path="/courses/category/technology" element={<Technology />} />
+          <Route path="/courses/collections" element={<Collections />} />
           <Route
             path="/courses/category/webdevelopment"
             element={<WebDevelopment />}

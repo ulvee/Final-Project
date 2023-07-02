@@ -177,6 +177,9 @@ function Header() {
                           <Link to={"/courses/category/technology"}>
                             <p className="option">Technology</p>
                           </Link>
+                          <Link to={"/courses/collections"}>
+                            <p className="option">Collections</p>
+                          </Link>
                         </div>
                         <div className="flex gap-[30px]">
                           <div

@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { IoSearchSharp } from "react-icons/io5";
 import axios from "axios";
 import SidebarCourse from "../../components/CoursesSection/sidebarCourse";
 import Popular from "../../components/CoursesSection/Popular";
@@ -38,7 +37,7 @@ function Business() {
         </div>
         <Popular />
       </div>
-      <div className="max-w-[1200px] mx-auto py-[100px] max-lg:px-[30px] max-xl:px-[30px]">
+      <div className="max-w-[1200px] w-[100%] mx-auto py-[100px] max-lg:px-[30px] max-xl:px-[30px]">
         <div className="flex justify-between max-md:flex-col max-md:gap-[50px] max-lg:justify-center max-lg:gap-[50px] max-xl:justify-center max-xl:gap-[50px]">
           <div className="w-[75%] flex flex-col gap-[40px] max-md:w-[100%] max-md:px-[30px] max-lg:w-[70%]">
             <div className="w-[100%] flex gap-[50px] justify-between">

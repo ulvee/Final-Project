@@ -25,8 +25,8 @@ function WebDevelopment() {
   const filteredData = data.filter((d) => d.category === "Web-Development");
 
   return (
-    <div className="flex flex-col">
-      <div>
+    <div className="flex flex-col w-[100%]">
+      <div className="w-100%">
         <div className="pages-main-bck flex justify-center items-center py-[130px] max-md:flex-col max-md:gap-[50px]">
           <h2 className="uppercase text-[white] font-[600] text-[60px] tracking-[5px] pr-[50px] max-md:pr-0 max-md:text-center max-md:flex max-md:flex-col max-lg:flex max-lg:flex-col">
             <span>Web</span>
@@ -40,7 +40,7 @@ function WebDevelopment() {
         </div>
         <Popular />
       </div>
-      <div className="max-w-[1200px] mx-auto py-[100px] max-lg:px-[30px] max-xl:px-[30px]">
+      <div className="max-w-[1200px] w-[100%] mx-auto py-[100px] max-lg:px-[30px] max-xl:px-[30px]">
         <div className="flex justify-between max-md:flex-col max-md:gap-[50px] max-lg:justify-center max-lg:gap-[50px] max-xl:justify-center max-xl:gap-[50px]">
           <div className="w-[75%] flex flex-col gap-[40px] max-md:w-[100%] max-md:px-[30px] max-lg:w-[70%]">
             <div className="w-[100%] flex gap-[50px] justify-between">
@@ -52,7 +52,7 @@ function WebDevelopment() {
               </button>
             </div>
 
-            <div className="flex flex-wrap gap-[43px] max-lg:gap-[34px] max-xl:gap-[34px]">
+            <div className="flex flex-wrap gap-[43px] w-[100%] max-lg:gap-[34px] max-xl:gap-[34px]">
               {filteredData
                 .sort((a, b) =>
                   sortAsc ? a.price - b.price : b.price - a.price

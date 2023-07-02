@@ -31,6 +31,7 @@ import GalleryPost from "./Admin/components/Post/GalleryPost";
 import ProjectPost from "./Admin/components/Post/ProjectPost";
 import Dashboard from "./Admin/components/Dashboard";
 import Collections from "./pages/CoursePages/Collections";
+import NotFound from "./pages/NotFound";
 
 axios.defaults.baseURL = "http://localhost:8080";
 axios.defaults.withCredentials = true;
@@ -78,6 +79,7 @@ function App() {
           <Route path="/admin/post/courses" element={<CoursePost />} />
           <Route path="/admin/post/gallery" element={<GalleryPost />} />
           <Route path="/admin/post/projects" element={<ProjectPost />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
         {!isAdminPage && <Footer />}
       </UserContextProvider>

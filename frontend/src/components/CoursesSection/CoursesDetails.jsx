@@ -72,7 +72,7 @@ function CoursesDetails() {
                         <span className="text-white bg-[#60d3c6] rounded-l-[5px] py-[12px] px-[25px] absolute top-[20px] uppercase font-[600] text-[18px] shadow-md right-0">
                           {d.category}
                         </span>
-                        <span className="bg-[#006195bd] text-[white] rounded-r-[5px] font-[700] w-[100px]  text-[18px] text-center py-[10px] uppercase absolute bottom-0 left-0">
+                        <span className="bg-[#006195bd] text-[white] rounded-r-[5px] font-[700] text-[18px] w-[100px] text-center py-[10px] uppercase absolute bottom-0 left-0">
                           $ {d.price}
                         </span>
                       </div>

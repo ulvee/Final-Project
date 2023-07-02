@@ -394,6 +394,10 @@ background: linear-gradient(to bottom, #0b8793, #360033); /* W3C, IE 10+/ Edge, 
 
 }
 
+.courses-card-rad{
+  border-radius: 10px;
+}
+
 @media (max-width: 768px) {
   .trusted-counter {
     display: none;

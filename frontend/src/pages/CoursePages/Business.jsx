@@ -44,23 +44,10 @@ function Business() {
             <div className="w-[100%] flex gap-[50px] justify-between">
               <button
                 onClick={toggle}
-                className="bg-[#60d3c6] px-[20px] rounded-[7px] text-[white] font-[600] text-[17px] uppercase"
+                className="bg-[#60d3c6] py-[10px] px-[20px] rounded-[7px] text-[white] font-[600] text-[17px] uppercase"
               >
                 Sort by price
               </button>
-              <form
-                action=""
-                className="w-[30%] flex border-b-[1px] py-[5px] px-[10px] border-[#00808085] max-md:w-[50%]"
-              >
-                <input
-                  type="text"
-                  placeholder="Search our courses..."
-                  className=" outline-none w-[100%]"
-                />
-                <button>
-                  <IoSearchSharp className="text-[20px] text-[#00808099]" />
-                </button>
-              </form>
             </div>
 
             <div className="flex flex-wrap gap-[43px] max-lg:gap-[34px] max-xl:gap-[34px]">
@@ -80,10 +67,10 @@ function Business() {
                           alt=""
                           className="w-[100%] h-[250px] max-md:h-[370px]"
                         />
-                        <span className="text-white bg-[#60d3c6] py-[12px] px-[25px] absolute top-[20px] uppercase font-[600] text-[18px] shadow-md right-0">
+                        <span className="text-white bg-[#60d3c6] rounded-l-[5px] py-[12px] px-[25px] absolute top-[20px] uppercase font-[600] text-[18px] shadow-md right-0">
                           {d.category}
                         </span>
-                        <span className="bg-white text-[#60d3c6] w-[100px] text-center py-[10px] uppercase absolute bottom-0 left-0">
+                        <span className="bg-[#006195bd] text-[white] rounded-r-[5px] font-[700] text-[18px] w-[100px] text-center py-[10px] uppercase absolute bottom-0 left-0">
                           $ {d.price}
                         </span>
                       </div>

@@ -43,7 +43,7 @@ function Gallery() {
                   src={d.image}
                   alt=""
                   onClick={() => choosePhote(d.image)}
-                  className="gallery-photo w-[100%]"
+                  className="gallery-photo w-[100%] h-[250px]"
                 />
                 <p onClick={() => choosePhote(d.image)} className="absolute text-[white] cursor-pointer top-0 gallery-zoom text-center pt-[105px] flex uppercase font-[900] text-[30px]">Click me</p>
               </div>

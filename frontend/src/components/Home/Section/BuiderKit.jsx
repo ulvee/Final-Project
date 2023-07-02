@@ -1,8 +1,12 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function BuiderKit() {
   return (
-    <section className="pb-[150px] max-md:px-[30px] max-lg:px-[30px] max-xl:px-[30px]" id="buider-kit">
+    <section
+      className="pb-[150px] max-md:px-[30px] max-lg:px-[30px] max-xl:px-[30px]"
+      id="buider-kit"
+    >
       <div className="max-w-[1200px] mx-auto flex gap-[50px] items-center max-md:flex-col max-md:items-center">
         <div className="w-full max-md:w-[80%] max-lg:w-[50%]">
           <img
@@ -14,7 +18,7 @@ function BuiderKit() {
         <div className="flex flex-col gap-[30px] items-start w-full max-md:w-[80%] max-lg:w-[50%]">
           <div>
             <p className="text-[25px]">Welcome to</p>
-            <h2 className="text-[37px]">CourseBuilder Kit</h2>
+            <h2 className="text-[37px]">Course Collections</h2>
           </div>
           <p className="text-[gray]">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do{" "}
@@ -26,7 +30,7 @@ function BuiderKit() {
             aliquip. Adipisicing elit, sed do eiusmod tempor incididunt.
           </p>
           <button className="w-[33%] py-[13px] uppercase font-[600]">
-            VIEW ALL
+            <Link to={"/courses/collections"}>VIEW ALL</Link>
           </button>
         </div>
       </div>

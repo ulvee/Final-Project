@@ -29,9 +29,11 @@ import PortfolioDashboard from "./Admin/components/PortfolioDashboard";
 import CoursePost from "./Admin/components/Post/CoursePost";
 import GalleryPost from "./Admin/components/Post/GalleryPost";
 import ProjectPost from "./Admin/components/Post/ProjectPost";
-import Dashboard from "./Admin/components/Dashboard";
 import Collections from "./pages/CoursePages/Collections";
 import NotFound from "./pages/NotFound";
+import Music from "./pages/CoursePages/Music";
+import Language from "./pages/CoursePages/Language";
+import Introductory from "./pages/CoursePages/Introductory";
 
 axios.defaults.baseURL = "http://localhost:8080";
 axios.defaults.withCredentials = true;
@@ -70,9 +72,14 @@ function App() {
             path="/courses/category/photography"
             element={<Photography />}
           />
+          <Route path="/courses/category/music" element={<Music />} />
+          <Route path="/courses/category/language" element={<Language />} />
+          <Route
+            path="/courses/category/introductory"
+            element={<Introductory />}
+          />
           <Route path="/projects/:id" element={<DetailPage />}></Route>
           <Route path="/admin" element={<Admin />} />
-          <Route path="/admin/dashboard" element={<Dashboard />} />
           <Route path="/admin/courses" element={<CoursesDashboard />} />
           <Route path="/admin/gallery" element={<GalleryDashboard />} />
           <Route path="/admin/project" element={<PortfolioDashboard />} />

@@ -177,6 +177,15 @@ function Header() {
                           <Link to={"/courses/category/technology"}>
                             <p className="option">Technology</p>
                           </Link>
+                          <Link to={"/courses/category/music"}>
+                            <p className="option">Music</p>
+                          </Link>
+                          <Link to={"/courses/category/introductory"}>
+                            <p className="option">Introductory</p>
+                          </Link>
+                          <Link to={"/courses/category/language"}>
+                            <p className="option">Language</p>
+                          </Link>
                           <Link to={"/courses/collections"}>
                             <p className="option">Collections</p>
                           </Link>

@@ -5,6 +5,7 @@ import { BsTelephoneFill } from "react-icons/bs";
 import { IoMail } from "react-icons/io5";
 import { MdLocationOn } from "react-icons/md";
 import { AiOutlineAndroid, AiOutlineApple } from "react-icons/ai";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
@@ -43,21 +44,41 @@ function Footer() {
                   Useful Links
                 </h2>
                 <div className="flex flex-col gap-[10px]">
-                  <li>About us</li>
-                  <li>Blog</li>
-                  <li>Buddy Profile</li>
-                  <li>Become an Instructor</li>
-                  <li>Membership</li>
+                  <Link to={"/about"}>
+                    <li>About us</li>
+                  </Link>
+                  <Link to={"/contact"}>
+                    <li>Contact</li>
+                  </Link>
+                  <Link to={"/projects"}>
+                    <li>Portfolio</li>
+                  </Link>
+                  <Link to={"/gallery"}>
+                    <li>Gallery</li>
+                  </Link>
+                  <Link to={"/courses"}>
+                    <li>Courses</li>
+                  </Link>
                 </div>
               </div>
               <div className="flex flex-col gap-[20px]">
                 <h2 className="text-[20px] uppercase font-[700]">Categories</h2>
                 <div className="flex flex-col gap-[10px]">
-                  <li>Web Development</li>
-                  <li>Design</li>
-                  <li>Business</li>
-                  <li>Photography</li>
-                  <li>Technology</li>
+                  <Link to={"/courses/category/webdevelopment"}>
+                    <li>Web-Development</li>
+                  </Link>
+                  <Link to={"/courses/category/design"}>
+                    <li>Design</li>
+                  </Link>
+                  <Link to={"/courses/category/business"}>
+                    <li>Business</li>
+                  </Link>
+                  <Link to={"/courses/category/photography"}>
+                    <li>Photography</li>
+                  </Link>
+                  <Link to={"/courses/category/technology"}>
+                    <li>Technology</li>
+                  </Link>
                 </div>
               </div>
             </div>

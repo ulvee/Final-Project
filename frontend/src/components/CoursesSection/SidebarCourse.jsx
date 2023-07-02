@@ -25,6 +25,15 @@ function SidebarCourse() {
           <li>
             <Link to={"/courses/category/webdevelopment"}>Web-Development</Link>
           </li>
+          <li>
+            <Link to={"/courses/category/music"}>Music</Link>
+          </li>
+          <li>
+            <Link to={"/courses/category/language"}>Language</Link>
+          </li>
+          <li>
+            <Link to={"/courses/category/introductory"}>Introductory</Link>
+          </li>
         </ul>
       </div>
       <div className="flex flex-col gap-[30px] py-[60px] custom-card-o-service">

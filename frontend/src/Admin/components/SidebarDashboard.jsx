@@ -29,19 +29,6 @@ function Sidebar() {
             rowGap="20px"
           >
             <div className="border-b border-t py-[5px]">
-              <Link to={"/admin/dashboard"}>
-                <AccordionItem border="none">
-                  <h2 className="font-[700] text-[white]">
-                    <AccordionButton>
-                      <Box as="span" flex="1" textAlign="left" fontSize="20">
-                        Dashboard
-                      </Box>
-                    </AccordionButton>
-                  </h2>
-                </AccordionItem>
-              </Link>
-            </div>
-            <div className="border-b border-t py-[5px]">
               <Link to={"/admin/courses"}>
                 <AccordionItem border="none">
                   <h2 className="font-[700] text-[white]">

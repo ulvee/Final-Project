@@ -30,11 +30,14 @@ function CoursePost() {
   return (
     <div className="flex">
       <Sidebar />
-      <div className="w-[80%]">
+      <div className="w-[80%] admin-right-background px-[100px] py-[30px] flex flex-col gap-[50px]">
+      <h1 className="bg-[#00000093] px-[30px] py-[10px] text-[25px] text-[white] font-bold uppercase rounded-[20px]">
+          Courses add item
+        </h1>
         <form
           action=""
           onSubmit={handleSubmit(postData)}
-          className="flex flex-col max-w-[600px] mx-auto gap-[30px]"
+          className="flex flex-col max-w-[600px] w-[100%] mx-auto gap-[30px]"
           id="register-form"
         >
           <div className="flex flex-col">
@@ -94,7 +97,7 @@ function CoursePost() {
               <p className="text-[red]">{errors.price?.message}</p>
             )}
           </div>
-          <button className="py-[12px] px-[20px] bg-[#1e90ff] rounded-[10px] border-[1px] border-[#1e90ff] text-[white] uppercase text-[20px] font-[700]">
+          <button className="py-[12px] px-[20px] bg-[#1e90ff] rounded-[10px] border-[1px] border-[#1e90ff] text-[white] uppercase text-[20px] font-[700] hover:bg-green-700 hover:border-green-700 duration-500">
             Add Items
           </button>
         </form>

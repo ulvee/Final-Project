@@ -27,11 +27,14 @@ function GalleryPost() {
   return (
     <div className="flex">
       <Sidebar />
-      <div className="w-[80%]">
+      <div className="w-[80%] flex flex-col admin-right-background px-[100px] relative justify-center">
+        <h1 className="bg-[#00000093] px-[30px] py-[10px] text-[25px] text-[white] absolute w-[83%] top-[30px] font-bold uppercase rounded-[20px] max-xl:w-[80%] max-lg:w-[70%] max-md:w-[60%]">
+          Gallery add item
+        </h1>
         <form
           action=""
           onSubmit={handleSubmit(postData)}
-          className="flex flex-col max-w-[600px] mx-auto gap-[30px]"
+          className="flex flex-col max-w-[600px] w-[100%] mx-auto gap-[30px]"
           id="register-form"
         >
           <div className="flex flex-col">
@@ -50,7 +53,7 @@ function GalleryPost() {
           </div>
           <button
             type="submit"
-            className="py-[12px] px-[20px] bg-[#1e90ff] rounded-[10px] border-[1px] border-[#1e90ff] text-[white] uppercase text-[20px] font-[700]"
+            className="py-[12px] px-[20px] bg-[#1e90ff] rounded-[10px] border-[1px] border-[#1e90ff] text-[white] uppercase text-[20px] font-[700] hover:bg-green-700 hover:border-green-700 duration-500"
           >
             Add Items
           </button>

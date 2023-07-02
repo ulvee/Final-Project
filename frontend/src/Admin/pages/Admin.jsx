@@ -24,7 +24,7 @@ function Admin() {
         toast.error(data.error);
       } else {
         setData({});
-        navigate("/admin/courses");
+        navigate("/admin/dashboard");
       }
     } catch (error) {}
   };

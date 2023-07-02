@@ -29,6 +29,7 @@ import PortfolioDashboard from "./Admin/components/PortfolioDashboard";
 import CoursePost from "./Admin/components/Post/CoursePost";
 import GalleryPost from "./Admin/components/Post/GalleryPost";
 import ProjectPost from "./Admin/components/Post/ProjectPost";
+import Dashboard from "./Admin/components/Dashboard";
 
 axios.defaults.baseURL = "http://localhost:8080";
 axios.defaults.withCredentials = true;
@@ -68,6 +69,7 @@ function App() {
           />
           <Route path="/projects/:id" element={<DetailPage />}></Route>
           <Route path="/admin" element={<Admin />} />
+          <Route path="/admin/dashboard" element={<Dashboard />} />
           <Route path="/admin/courses" element={<CoursesDashboard />} />
           <Route path="/admin/gallery" element={<GalleryDashboard />} />
           <Route path="/admin/project" element={<PortfolioDashboard />} />

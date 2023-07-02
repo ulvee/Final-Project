@@ -311,11 +311,23 @@ li {
   overflow: hidden;
   img {
     transition: all 0.5s ease-in-out;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
   }
 }
 .popular-course-img img:hover {
   transform: scale(1.2);
   transition: all 0.5s ease-in-out;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  .popular-course-img {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+}
+.popular-course-img {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
 
 .getstarted-bck {
@@ -359,6 +371,27 @@ li {
     border: 2px solid #1e90ff;
     border-radius: 10px;
   }
+}
+
+.admin-right-background {
+  background: #304352; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #d7d2cc,
+    #304352
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #d7d2cc,
+    #304352
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.admin-sidebar-bck {
+  background: #360033;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to bottom, #0b8793, #360033);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to bottom, #0b8793, #360033); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 
 @media (max-width: 768px) {

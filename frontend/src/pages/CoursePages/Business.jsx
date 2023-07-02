@@ -71,7 +71,7 @@ function Business() {
                 .map((d, index) => {
                   return (
                     <div
-                      className="w-[30%] flex flex-col bg-[white] pb-[20px] shadow-md gap-[20px] max-md:w-[100%] max-lg:w-[46%] max-xl:w-[30%] "
+                      className="w-[30%] flex flex-col bg-[white] pb-[20px] shadow-md gap-[20px] max-md:w-[100%] max-lg:w-[46%] max-xl:w-[30%] courses-card-rad"
                       key={index}
                     >
                       <div className="relative popular-course-img">
